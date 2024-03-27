@@ -26,17 +26,29 @@ const Footer = () => {
                         </h2>
                         <div className="foot_subs">
                             <p>Subscribe to our Email alerts to receive early discount offers, and new products info.</p>
-                            <form onSubmit={handleSubmit}>
+                            {/* <form onSubmit={handleSubmit}>
                                 <input
                                     type="email"
-                                    className="input_field"
-                                    placeholder="Email Address*"
-                                    required
+                                   
                                     value={subValue}
                                     onChange={(e) => setSubValue(e.target.value)}
                                 />
-                                <button type="submit" className="btn">Subscribe</button>
+                                <button type="submit" >Subscribe</button>
+                            </form> */}
+                            <form   action="https://formspree.io/f/xwkdoenz" method="POST">
+
+                              <label>
+                              Your email:
+                              <input type="email" name="email"   className="input_field"  placeholder="Email Address*" required/>
+                             </label>
+ 
+                            <button type="submit"  className="btn">Send</button>
                             </form>
+
+
+
+
+
                         </div>
                     </div>
 
@@ -70,12 +82,12 @@ const Footer = () => {
             <div className="sub_footer">
                 <div className="container">
                     <div className="sub_footer_wrapper">
-                        <div className="foot_copyright">
+                        {/* <div className="foot_copyright">
                             <p>
                                 {currYear} | XBeat. All Rights Reserved.
                                 Built by | <a href="https://gulshansongara.netlify.app/">Gulshan Songara</a>
                             </p>
-                        </div>
+                        </div> */}
                         <div className="foot_social">
                             {
                                 footSocial.map((item) => {

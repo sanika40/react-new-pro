@@ -17,13 +17,13 @@ const Header = () => {
 
     // handle the sticky-header
     useEffect(() => {
-        const handleIsSticky = () => window.scrollY >= 50 ? setIsSticky(true) : setIsSticky(false);
+        const handleIsSticky = () => window.scrollY >= 500 ? setIsSticky(true) : setIsSticky(false);
 
         window.addEventListener('scroll', handleIsSticky);
 
-        return () => {
-            window.removeEventListener('scroll', handleIsSticky);
-        };
+        // return () => {
+        //     window.removeEventListener('scroll', handleIsSticky);
+        // };
     }, [isSticky]);
 
 
@@ -36,7 +36,7 @@ const Header = () => {
                 <div className="container">
                     <div className="navbar">
                         <h2 className="nav_logo">
-                            <Link to="/">X-Beat</Link>
+                            <Link to="/">BOAT</Link>
                         </h2>
                         <nav className="nav_actions">
                             <div className="search_action">
